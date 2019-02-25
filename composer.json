@@ -1,42 +1,32 @@
 {
-    "name": "dinkbit/conekta-cashier",
-    "description": "Dinkbit Cashier nos da una interface para cobrar subscripciones con Conketa en Laravel.",
-    "keywords": ["dinkbit", "conekta", "laravel", "billing"],
+    "name": "backappspace/laravel-conekta-cashier",
+    "description": "laravel-conekta-cashier nos da una interface para cobrar subscripciones con Conketa en Laravel. (fork of Backappspace Cashier)",
+    "keywords": ["backappspace", "conekta", "laravel", "billing"],
     "license": "MIT",
     "authors": [
         {
-            "name": "dinkbit",
-            "email": "developers@dinkbit.com",
-            "homepage": "https://github.com/dinkbit/conekta-cashier"
+            "name": "backappspace",
+            "email": "opensource@backapp.software",
+            "homepage": "https://github.com/backappspace/laravel-conekta-cashier"
         },
-        {
-            "name": "Rafael Masri",
-            "email": "rafael.masri@dinkbit.com",
-            "role": "Developer"
-        },
-        {
-            "name": "Joseph Cohen",
-            "email": "joseph.cohen@dinkbit.com",
-            "role": "Developer"
-        }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "conekta/conekta-php": "~2.0.4",
-        "illuminate/filesystem": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
-        "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
-        "nesbot/carbon": "~1.0",
-        "symfony/http-kernel": "~2.6|~3.0"
+        "php": ">=7.1.0",
+        "conekta/conekta-php": "4.0.4",
+        "illuminate/filesystem": "5.5.*|5.6.*|5.7.*",
+        "illuminate/support": "5.5.*|5.6.*|5.7.*",
+        "nesbot/carbon": "^1.26.3",
+        "symfony/http-kernel": "^4.1"
     },
     "require-dev": {
-        "illuminate/routing": "~5.0",
-        "illuminate/view": "~5.0",
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "4.0.*"
+        "illuminate/routing": "^4.1",
+        "illuminate/view": "5.5.*|5.6.*|5.7.*",
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^7.5"
     },
     "autoload": {
         "psr-0": {
-            "Dinkbit\\ConektaCashier\\": "src/"
+            "Backappspace\\ConektaCashier\\": "src/"
         }
     },
     "extra": {

@@ -104,9 +104,9 @@ class BillableTraitTest extends PHPUnit_Framework_TestCase
     }
 }
 
-class BillableTraitTestStub implements Dinkbit\ConektaCashier\Contracts\Billable
+class BillableTraitTestStub implements Backappspace\ConektaCashier\Contracts\Billable
 {
-    use Dinkbit\ConektaCashier\Billable;
+    use Backappspace\ConektaCashier\Billable;
     public $cardUpFront = false;
 
     public function save()
@@ -114,9 +114,9 @@ class BillableTraitTestStub implements Dinkbit\ConektaCashier\Contracts\Billable
     }
 }
 
-class BillableTraitCardUpFrontTestStub implements Dinkbit\ConektaCashier\Contracts\Billable
+class BillableTraitCardUpFrontTestStub implements Backappspace\ConektaCashier\Contracts\Billable
 {
-    use Dinkbit\ConektaCashier\Billable;
+    use Backappspace\ConektaCashier\Billable;
     public $cardUpFront = true;
 
     public function save()

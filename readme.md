@@ -1,13 +1,13 @@
 # Laravel Conekta Cashier
 
-[![Build Status](https://img.shields.io/travis/dinkbit/conekta-cashier.svg?style=flat-square)](https://travis-ci.org/dinkbit/conekta-cashier)
+[![Build Status](https://img.shields.io/travis/Backappspace/conekta-cashier.svg?style=flat-square)](https://travis-ci.org/Backappspace/conekta-cashier)
 [![StyleCI](https://styleci.io/repos/22849643/shield)](https://styleci.io/repos/22849643)
 
-[![image](https://s3.amazonaws.com/dinkbit/img/firmas/firma_dinkbit.png)](<http://dinkbit.com>)
+[![image](https://s3.amazonaws.com/Backappspace/img/firmas/firma_Backappspace.png)](<http://Backappspace.com>)
 
 Port of Stripe [Laravel Cashier](https://github.com/laravel/cashier) to Conekta
 
-Please note the latest version of Laravel Cashier supports Laravel 5+, if you are looking for the Laravel 4 implementation see the [1.0](https://github.com/dinkbit/conekta-cashier/tree/1.0) branch.
+Please note the latest version of Laravel Cashier supports Laravel 5+, if you are looking for the Laravel 4 implementation see the [1.0](https://github.com/Backappspace/conekta-cashier/tree/1.0) branch.
 
 ___
 
@@ -36,11 +36,11 @@ Laravel Cashier provides an expressive, fluent interface to [Conekta's](https://
 
 First, add the Cashier package to your `composer.json` file:
 
-	"dinkbit/conekta-cashier": "~2.0" (For Conekta 1.0.0 PHP-SDK 2.0)
+	"backappspace/conekta-cashier": "~2.0" (For Conekta 1.0.0 PHP-SDK 2.0)
 
 #### Service Provider
 
-Next, register the `Dinkbit\ConektaCashier\CashierServiceProvider` in your `app` configuration file.
+Next, register the `Backappspace\ConektaCashier\CashierServiceProvider` in your `app` configuration file.
 
 #### Migration
 
@@ -50,8 +50,8 @@ Before using Cashier, we'll need to add several columns to your database. Don't 
 
 Next, add the `Billable` trait and appropriate date mutators to your model definition:
 
-	use Dinkbit\ConektaCashier\Billable;
-	use Dinkbit\ConektaCashier\Contracts\Billable as BillableContract;
+	use Backappspace\ConektaCashier\Billable;
+	use Backappspace\ConektaCashier\Contracts\Billable as BillableContract;
 
 	class User extends Eloquent implements BillableContract {
 
@@ -213,7 +213,7 @@ The `onPlan` method may be used to determine if the user is subscribed to a give
 
 What if a customer's credit card expires? No worries - Cashier includes a Webhook controller that can easily cancel the customer's subscription for you. Just point a route to the controller:
 
-	Route::post('conekta/webhook', 'Dinkbit\ConektaCashier\WebhookController@handleWebhook');
+	Route::post('conekta/webhook', 'Backappspace\ConektaCashier\WebhookController@handleWebhook');
 
 That's it! Failed payments will be captured and handled by the controller. The controller will cancel the customer's subscription after three failed payment attempts. The `conekta/webhook` URI in this example is just for example. You will need to configure the URI in your Conekta settings.
 
@@ -222,7 +222,7 @@ That's it! Failed payments will be captured and handled by the controller. The c
 
 If you have additional Conekta webhook events you would like to handle, simply extend the Webhook controller. Your method names should correspond to Cashier's expected convention, specifically, methods should be prefixed with `handle` and the name of the Conekta webhook you wish to handle. For example, if you wish to handle the `invoice.payment_succeeded` webhook, you should add a `handleInvoicePaymentSucceeded` method to the controller.
 
-	class WebhookController extends Dinkbit\ConektaCashier\WebhookController {
+	class WebhookController extends Backappspace\ConektaCashier\WebhookController {
 
 		public function handleInvoicePaymentSucceeded($payload)
 		{

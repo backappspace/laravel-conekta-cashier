@@ -28,7 +28,7 @@ class WebhookControllerTest extends PHPUnit_Framework_TestCase
     }
 }
 
-class WebhookControllerTestStub extends Dinkbit\ConektaCashier\WebhookController
+class WebhookControllerTestStub extends Backappspace\ConektaCashier\WebhookController
 {
     public function handleChargeSucceeded()
     {
