@@ -1,0 +1,48 @@
+{
+    "name": "dinkbit/conekta-cashier",
+    "description": "Dinkbit Cashier nos da una interface para cobrar subscripciones con Conketa en Laravel.",
+    "keywords": ["dinkbit", "conekta", "laravel", "billing"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dinkbit",
+            "email": "developers@dinkbit.com",
+            "homepage": "https://github.com/dinkbit/conekta-cashier"
+        },
+        {
+            "name": "Rafael Masri",
+            "email": "rafael.masri@dinkbit.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Joseph Cohen",
+            "email": "joseph.cohen@dinkbit.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "conekta/conekta-php": "~2.0.4",
+        "illuminate/filesystem": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+        "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+        "nesbot/carbon": "~1.0",
+        "symfony/http-kernel": "~2.6|~3.0"
+    },
+    "require-dev": {
+        "illuminate/routing": "~5.0",
+        "illuminate/view": "~5.0",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Dinkbit\\ConektaCashier\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
