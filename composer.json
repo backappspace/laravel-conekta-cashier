@@ -8,7 +8,7 @@
             "name": "backappspace",
             "email": "opensource@backapp.software",
             "homepage": "https://github.com/backappspace/laravel-conekta-cashier"
-        },
+        }
     ],
     "require": {
         "php": ">=7.1.0",
