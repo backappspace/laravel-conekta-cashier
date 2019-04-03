@@ -7,7 +7,7 @@
 
 Port of Stripe [Laravel Cashier](https://github.com/laravel/cashier) to Conekta
 
-Please note the latest version of Laravel Cashier supports Laravel 5+, if you are looking for the Laravel 4 implementation see the [1.0](https://github.com/Backappspace/conekta-cashier/tree/1.0) branch.
+Please note the latest version of Laravel Cashier supports Laravel 5.6.* and 5.7.*
 
 ___
 
@@ -36,7 +36,7 @@ Laravel Cashier provides an expressive, fluent interface to [Conekta's](https://
 
 First, add the Cashier package to your `composer.json` file:
 
-	"backappspace/conekta-cashier": "~2.0" (For Conekta 1.0.0 PHP-SDK 2.0)
+	"backappspace/conekta-cashier" (We are using Conekta 4.0.4)
 
 #### Service Provider
 
