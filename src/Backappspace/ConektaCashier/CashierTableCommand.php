@@ -74,4 +74,12 @@ class CashierTableCommand extends Command
             ['table', InputArgument::REQUIRED, 'The name of your billable table.'],
         ];
     }
+
+    /**
+     * Handle
+     */
+    public function handle()
+    {
+        $this->fire();
+    }
 }
